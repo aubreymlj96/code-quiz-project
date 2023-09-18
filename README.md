@@ -28,7 +28,7 @@ THEN I can save my initials and my score
 
 The following animation demonstrates the application functionality:
 
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./image-ref/Capture.PNG)
+![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./image-ref/Capture.PNG) (./image-ref/04-web-apis-homework-demo.gif)
 
 
 ## Installation
@@ -60,6 +60,8 @@ The JavaScript contributes the following:
 ## Credits
 
 Erik (TA) provided a refresher on how to store/retrieve previous scores.
+
+Alexis Gonzales (Calendy Tutor) advised on how to subtract time when an incorrect answer is selected, as well as how to record the score once the quiz is finished.
 
 ## License
 

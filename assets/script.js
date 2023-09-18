@@ -1,3 +1,4 @@
+//The items listed below are elements and IDs/classes that are recognized globally in the js code.
 var questionElement = document.getElementById("question");
 var startButton = document.getElementById("start-btn")
 var answerButtons = document.getElementById("answer-buttons");
@@ -12,6 +13,7 @@ var timeLeft = 60;
 
 //getElementById do NOT need hashtags or periods.
 
+//This function is connected to the timer on the page. When a question is answered incorrectly, the timer will subtract 5 seconds (per the global variable and the else statement in the selectAnswer function)
 function countdown() {
     timerEl.style.color = "black";
     timerEl.style.position = "left";
@@ -28,17 +30,19 @@ function countdown() {
     }, 1000);
   }
 
+//Prompt will appear when timer has run out
 function displayMessage() {
     alert("Time is up!")
 
 }
 
-  function resetState(){
+//
+function resetState(){
     startButton.style.display = "none";
     quizEl.setAttribute("style", "display: block;")
-  }
+}
 
-
+//This event listener allows the quiz to commense once 'start quiz' or the startButton is engaged.
 startButton.addEventListener("click", function(){
     console.log("I was clicked!");
     startQuiz();
@@ -52,12 +56,11 @@ function startQuiz(){
     resetState();
     currentQuestionIndex = 0;
     score = 0;
-    // nextButton.innerHTML = "Next";
     showQuestion();
 }
 
 
-
+//The following questions are set to display after the answers are selected (per the showQuestion and selectAnswer functions).
 var questions = [
     {
         question: "Commonly used data types DO NOT include:", answers: [
@@ -145,6 +148,7 @@ function endQuiz(){
         questionElement.innerHTML = "Your score is " + score + "."
 }
 
+//The following code (eventListeners/localStorage/array/etc) allows the user to enter their initials and view previous scores when 'View Old Scores' is engaged.
 let gitScores = JSON.parse(localStorage.getItem("enter-score"));
 
 if (!gitScores) {

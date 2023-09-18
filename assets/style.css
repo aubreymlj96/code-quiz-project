@@ -62,9 +62,7 @@ body {
     background: plum;
     color: white;
 }
-.btn:disabled {
-    cursor: no-drop;
-}
+
 #next-scores {
     background: plum;
     color: solid black;
